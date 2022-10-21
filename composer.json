@@ -59,8 +59,7 @@
     "drupal/views_block_filter_block": "1.0.0-beta1",
     "drush/drush": "^9.0.0",
     "oomphinc/composer-installers-extender": "v1.1.2",
-    "ramsalt/rm_shortnews": "1.0.0",
-    "ramsalt/rm_theme": "1.0.0",
+    "coozila/rm_shortnews": "1.0.0",
     "vlucas/phpdotenv": "^4.0",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3"
