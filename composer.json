@@ -2,12 +2,27 @@
   "name": "coozila/media-news",
   "description": "Metapackage as a updatable middleware between coozila/media-news and its dependencies.",
   "type": "metapackage",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Stephan Zeidler",
       "email": "stephan@ramsalt.com"
     }
   ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://repo.packagist.com/coozila/"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
   "require": {
     "thunder/thunder-distribution": "3.4.2",
     "ckeditor/notification": "^4.8",
