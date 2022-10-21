@@ -1,0 +1,126 @@
+{
+  "name": "coozila/media-news",
+  "description": "Metapackage as a updatable middleware between coozila/media-news and its dependencies.",
+  "type": "metapackage",
+  "authors": [
+    {
+      "name": "Stephan Zeidler",
+      "email": "stephan@ramsalt.com"
+    }
+  ],
+  "require": {
+    "thunder/thunder-distribution": "3.4.2",
+    "ckeditor/notification": "^4.8",
+    "ckeditor/wordcount": "1.17.2",
+    "composer/installers": "v1.5.0",
+    "cweagans/composer-patches": "1.6.6",
+    "drupal-composer/drupal-scaffold": "2.5.4",
+    "drupal/editor_advanced_link": "1.6.0",
+    "drupal/auto_entitylabel": "3.0.0-beta2",
+    "drupal/better_formats": "1.x-dev",
+    "drupal/block_class": "1.0.0",
+    "drupal/classy_paragraphs": "1.0.0-beta1",
+    "drupal/coffee": "1.0.0-beta2",
+    "drupal/components": "1.1.0",
+    "drupal/config_ignore": "2.2.0",
+    "drupal/config_split": "1.4.0",
+    "drupal/console": "^1.9",
+    "drupal/devel": "2.1.0",
+    "drupal/disqus": "1.0.0-rc3",
+    "drupal/ds": "3.4.0",
+    "drupal/entity_embed": "1.0.0",
+    "drupal/entity_usage": "2.0.0-beta1",
+    "drupal/fallback_formatter": "1.0.0",
+    "drupal/features": "3.8.0",
+    "drupal/fico": "1.x-dev",
+    "drupal/google_analytics_counter": "3.0-alpha19",
+    "drupal/layout_plugin": "1.0-alpha23",
+    "drupal/mailchimp_popup_block": "1.0.0",
+    "drupal/menu_link_attributes": "1.0",
+    "drupal/page_manager": "4.0.0-beta4",
+    "drupal/panels": "4.4.0",
+    "drupal/paragraphs_edit": "2.0.0-alpha6",
+    "drupal/paragraphs_layouts": "1.x-dev",
+    "drupal/publication_date": "2.0.0-beta1",
+    "drupal/purge": "3.0-beta9",
+    "drupal/quicktabs": "3.0.0-alpha2",
+    "drupal/redis": "1.2.0",
+    "drupal/schema_metatag":"1.4.0",
+    "drupal/search_api_solr": "3.8.0",
+    "drupal/smart_trim": "1.2.0",
+    "drupal/social_media_links": "2.6.0",
+    "drupal/stage_file_proxy": "1.0.0-beta1",
+    "drupal/token_filter": "1.1.0",
+    "drupal/twig_field_value": "1.2.0",
+    "drupal/twig_tweak": "2.4.0",
+    "drupal/ultimate_cron": "2.0.0-alpha4",
+    "drupal/varnish_purge": "1.11.0",
+    "drupal/video_embed_facebook": "1.3.0",
+    "drupal/views_block_filter_block": "1.0.0-beta1",
+    "drush/drush": "^9.0.0",
+    "oomphinc/composer-installers-extender": "v1.1.2",
+    "ramsalt/rm_shortnews": "1.0.0",
+    "ramsalt/rm_theme": "1.0.0",
+    "vlucas/phpdotenv": "^4.0",
+    "webflo/drupal-finder": "^1.0.0",
+    "webmozart/path-util": "^2.3"
+  },
+  "extra": {
+    "patches": {
+      "drupal/core": {
+        "UI for publishing/unpublishing block_content blocks": "https://gist.githubusercontent.com/szeidler/9049977184f2433d37682358e800f541/raw/fb44701253edcca99e58ebf09290e897414241d7/2834546-116-v2.patch",
+        "Call to a member function isTranslatable() on null in SqlContentEntityStorage": "https://www.drupal.org/files/issues/2018-12-11/is-translateable-on-null-2928108-31.patch",
+        "A translation already exists for the specified language": "https://www.drupal.org/files/issues/2019-01-07/3020448-revert-issue-2946402-6.patch",
+        "Overriding already overridden libraries-override requires knowledge of previous libraries-overrides": "https://www.drupal.org/files/issues/2019-01-22/2642122-97.patch",
+        "TranslatableMarkup for Invalid Argument Exception: $string (Array) must be a string.": "https://www.drupal.org/files/issues/2719553-11.patch"
+      },
+      "drupal/dropzonejs": {
+        "Allow configuration of dropzonejs timeout, default value causes silent errors.": "https://www.drupal.org/files/issues/2018-11-07/dropzonejs-upload-timeout--2977463-10.patch"
+      },
+      "drupal/page_manager": {
+        "Incorrect page_title title in browser toolbar": "https://www.drupal.org/files/issues/2018-07-18/page_manager-incorrect-page_title-2752227-34-8.x.4.x.patch"
+      },
+      "drupal/panels": {
+        "Custom attributes in panels blocks and variants": "https://www.drupal.org/files/issues/2018-09-25/panels_custom_attributes_in_panels_blocks-2849867-38.patch"
+      },
+      "drupal/paragraphs_edit": {
+        "Show paragraphs edit contextual links, even when no root parent was found. E.g. when using it with entity_embed": "https://gist.githubusercontent.com/szeidler/aedcf23e11af43f40f4a08466f76b459/raw/4e98c86f1505db0796bc253455d7a48c8cb5d318/paragraphs_edit-show_contextual_links_even_without_root_parent.patch"
+      },
+      "drupal/views_block_filter_block": {
+        "Collision with ctools_views. Remove when disabling ctools_views": "https://www.drupal.org/files/issues/2018-08-08/views_block_filter_block-replace_core_block_plugin_with_ctools_views-2853002-5.patch"
+      },
+      "drupal/disqus": {
+        "Disqus migrate support is broken https://www.drupal.org/project/disqus/issues/2879592#comment-12404859": "https://www.drupal.org/files/issues/disqus-migrate-support-2879592-14.patch"
+      },
+      "drupal/content_lock": {
+        "content_lock causes redirect response when executing migrate-rollback on drush/drupal console or mass deletion with views bulk operation": "https://www.drupal.org/files/issues/2018-08-28/2951652-4.patch"
+      },
+      "drupal/purge": {
+        "Drush 9 commands": "https://www.drupal.org/files/issues/2921309-17-port-purge-drush-9.patch"
+      },
+      "drupal/diff": {
+        "Back button for comparison page": "https://www.drupal.org/files/issues/back_button_for-2853193-4.patch"
+      },
+      "drupal/amp": {
+        "Missing schema": "https://www.drupal.org/files/issues/missing_schema_for-2878769-3.patch"
+      },
+      "drupal/scheduler": {
+        "Deny edit access to scheduled content for unprivileged users": "https://www.drupal.org/files/issues/2018-12-18/3020250-8.patch",
+        "Call to function runLightweightCron() on null in SchedulerCommands->cron()": "https://www.drupal.org/files/issues/2019-09-02/3078674-1.drush-schedulermanager-typo.patch"
+      },
+      "drupal/password_policy": {
+        "Policies should declare a config dependency on the plugin modules": "https://www.drupal.org/files/issues/2018-10-09/2918974-2.patch",
+        "Importing configuration on site without password_policy activated": "https://www.drupal.org/files/issues/2019-05-20/password_policy-config_import_field_error-2771129-80.patch"
+      },
+      "drupal/social_media_links": {
+        "Use new Core EmailValidator service for 3rd party library compatibility": "https://www.drupal.org/files/issues/2019-12-01/social_media_links-email_validation_broken-3094177-2.patch"
+      },
+      "drupal/scheduler_content_moderation_integration": {
+        "SchedulerModerationWidget cannot be used if the field is overridden": "https://www.drupal.org/files/issues/2019-10-08/scheduler_content_moderation_integration-widget_not_available-3086546-2.patch"
+      },
+      "drupal/ultimate_cron": {
+        "port drush commands to drush 9.x": "https://www.drupal.org/files/issues/2018-07-16/2912724-17.patch"
+      }
+    }
+  }
+}
