@@ -16,7 +16,7 @@
         },
         {
             "type": "composer",
-            "url": "https://repo.packagist.com/coozila/"
+            "url": "https://repo.packagist.org"
         },
         {
             "type": "composer",
